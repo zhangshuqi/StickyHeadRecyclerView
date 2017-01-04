@@ -10,7 +10,6 @@
 
  <blockquote>
 标题栏以下就是recyclerView+normalHead 的布局, item的布局的head必须要跟normalHead的布局一模一样,如果不一样则实现不了需求.
- 详细见底下代码,github地址 https://github.com/zhangshuqi/StickyHeadRecyclerView
  </blockquote>
 
 ```
@@ -78,6 +77,5 @@
 
 所以说 这个实现过程虽然简单, 就是有其局限性就是normalHead和itemView的head的布局都要一模一样, 不然是实现不了的
 
-希望我的注释能够帮到同学们,如果有些难以理解, 或者我的注释写的不够完善,(我表达不大行....感觉好多东西都是只可意会不可言传.....) 请到我的github上下载看一下(可以把fresco的依赖去掉写个imageView足以实现需求.)
-github地址 https://github.com/zhangshuqi/StickyHeadRecyclerView 
+希望我的注释能够帮到同学们,如果有些难以理解, 或者我的注释写的不够完善,(我表达不大行....感觉好多东西都是只可意会不可言传.....) 直接下载项目看一下效果就能明白,或者到http://www.jianshu.com/p/911b269f6b9c提出疑问.我会尽我所能解答.
  </blockquote>
