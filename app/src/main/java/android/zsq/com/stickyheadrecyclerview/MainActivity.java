@@ -58,24 +58,16 @@ public class MainActivity extends AppCompatActivity {
                 // 当recyclerView的滑动改变改变的时候 实时拿到它的高度
                 headHeight = normalHead.getHeight();
             }
-
             @Override
             public void onScrolled(RecyclerView recyclerView, int dx, int dy) {
                 super.onScrolled(recyclerView, dx, dy);
-                // 根据当前的position的下一个拿到view
                 View itemView = linearLayoutManager.findViewByPosition(mCurrentPosition + 1);
                 if (itemView != null) {
-                    // 通过itemView 顶部y 坐标  判断是否小于或者等于head的底部y坐标,如果小于的话,说明itemViewHead 已经滑到了在recyclerView上的head了,
-                    // 就开始对NormalHead 进行操作
-                    Log.d("---",itemView.getTop()+"getTop");
-                    Log.d("---",headHeight+"headHeight");
+                    // 100      110  10
                     if (itemView.getTop() <= headHeight) {
-                        // 设置normalHead不断的向-y的方向滑动(可以说是隐藏)
                         normalHead.setY(-(headHeight - itemView.getTop()));
                     } else {
-                        // 如果当itemView 顶部y 坐标已经占据了normalHead的全部了,那么,就说明上一个的item的head已经在屏幕外了.,把当前的item的head 显示在normalHead之上,并且将Y的值设定成0
                         normalHead.setY(0);
-                        Log.d("---","----");
                     }
                 }
                 //拿到当前显示的item的position
